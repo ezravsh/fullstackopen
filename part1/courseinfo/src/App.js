@@ -12,15 +12,16 @@ const Part = (props) => {
   )
 }
 
-const Content = (props) => {
+{/*const Content = (props) => {
+  console.log(props)
   return (
     <div>
-      <Part part={props.part} exercises={props.exercises}/>
-      <Part part={props.part} exercises={props.exercises}/>
-      <Part part={props.part} exercises={props.exercises}/>
+      <Part part={props.parts[0].name} exercises={props.parts[1].exercises}/>
+      <Part part={props.parts[1].name} exercises={props.parts[2].exercises}/>
+      <Part part={props.parts[2].name} exercises={props.parts[3].exercises}/>
     </div>
   )
-}
+}*/}
 
 const Total = (props) => {
 
