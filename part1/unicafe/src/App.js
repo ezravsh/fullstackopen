@@ -6,9 +6,14 @@ const App = () => {
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
 
+const Button = () => {
+
+}
+
   return (
     <div>
-      code here
+      <h1> Give Feedback! </h1>
+
     </div>
   )
 }
