@@ -7,13 +7,15 @@ const App = () => {
   const [bad, setBad] = useState(0)
 
 const Button = () => {
-
+  return (
+  <button>good</button>
+  )
 }
 
   return (
     <div>
-      <h1> Give Feedback! </h1>
-
+      <h2> Give Feedback! </h2>
+      <Button />
     </div>
   )
 }
