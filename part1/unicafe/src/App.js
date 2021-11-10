@@ -16,6 +16,7 @@ const Button = () => {
     <div>
       <h2> Give Feedback! </h2>
       <Button />
+      <h2> Statistics: </h2>
     </div>
   )
 }
