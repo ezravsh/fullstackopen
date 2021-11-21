@@ -28,8 +28,8 @@ const StatisticLine = ({text, value}) => {
   )
 }
 
-const Button = ({good, neutral, bad}) => {
-  //return <button onClick={goodPlus}> good </button>
+const Button = ({action, text}) => {
+  return <button onClick={action}> {text} </button>
 }
 
 const App = () => {
@@ -54,9 +54,9 @@ const badPlus = () => {
   return (
     <div>
       <h2> Give Feedback! </h2>
-      <button onClick={goodPlus}> good </button>
-      <button onClick={neutralPlus}> neutral</button>
-      <button onClick={badPlus}> bad </button>
+      <Button action={goodPlus} text="good"/>
+      <Button action={neutralPlus} text="neutral"/>
+      <Button action={badPlus} text="bad"/>
       <Statistics good={good} neutral={neutral} bad={bad}/>
     </div>
   )
