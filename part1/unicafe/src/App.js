@@ -13,13 +13,23 @@ const Statistics = ({good, neutral, bad}) => {
   return (
     <div>
   <h2> Statistics: </h2>
-  <p>good: {good}</p>
-  <p>neutral: {neutral}</p>
-  <p>bad: {bad}</p>
-  <p>Average: {(good-bad)/(good+neutral+bad)}</p>
-  <p>Positive: {good/(good+neutral+bad)}</p>
+  <StatisticLine text="good" value={good}/>
+  <StatisticLine text="neutral" value={neutral}/>
+  <StatisticLine text="bad" value={bad}/>
+  <StatisticLine text="Average" value={(good-bad)/(good+neutral+bad)}/>
+  <StatisticLine text="Positive" value={good/(good+neutral+bad)}/>
     </div>
   )}
+}
+
+const StatisticLine = ({text, value}) => {
+  return (
+    <p>{text}: {value}</p>
+  )
+}
+
+const Button = ({good, neutral, bad}) => {
+  //return <button onClick={goodPlus}> good </button>
 }
 
 const App = () => {
