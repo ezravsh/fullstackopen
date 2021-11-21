@@ -13,18 +13,26 @@ const Statistics = ({good, neutral, bad}) => {
   return (
     <div>
   <h2> Statistics: </h2>
+  <table>
+  <tbody>
   <StatisticLine text="good" value={good}/>
   <StatisticLine text="neutral" value={neutral}/>
   <StatisticLine text="bad" value={bad}/>
+  <StatisticLine text="All" value={good+neutral+bad}/>
   <StatisticLine text="Average" value={(good-bad)/(good+neutral+bad)}/>
   <StatisticLine text="Positive" value={good/(good+neutral+bad)}/>
+  </tbody>
+  </table>
     </div>
   )}
 }
 
 const StatisticLine = ({text, value}) => {
   return (
-    <p>{text}: {value}</p>
+    <tr>
+    <td>{text}:</td>
+    <td>{value}</td>
+    </tr>
   )
 }
 
@@ -40,15 +48,15 @@ const App = () => {
 
 const goodPlus = () => {
   setGood(good+1);
-  console.log(good);
+  //console.log(good);
 }
 const neutralPlus = () => {
   setNeutral(neutral+1);
-  console.log(neutral);
+  //console.log(neutral);
 }
 const badPlus = () => {
   setBad(bad+1);
-  console.log(bad);
+  //console.log(bad);
 }
 
   return (
