@@ -6,16 +6,15 @@ const App = () => {
   const [neutral, setNeutral] = useState(0)
   const [bad, setBad] = useState(0)
 
-const Button = () => {
-  return (
-  <button>good</button>
-  )
+const increaseByOne = () => {
+  setGood(good+1);
+  console.log(good);
 }
 
   return (
     <div>
       <h2> Give Feedback! </h2>
-      <Button />
+      <button onClick={increaseByOne}> Good </button>
       <h2> Statistics: </h2>
     </div>
   )
