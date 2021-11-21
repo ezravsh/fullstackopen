@@ -16,7 +16,7 @@ const App = () => {
    
   const [selected, setSelected] = useState(0)
 
-  const random =()=>{
+  const random = () => {
     const i = Math.floor(Math.random()*7)
     setSelected(i)
     console.log(`i: ${i}`)
@@ -32,13 +32,29 @@ const App = () => {
     console.log(copy)
   }
 
+  const Anecdote = () => {
+    const n = Math.max(...points)
+    console.log('largest', n)
+    const index = points.indexOf(n)
+    console.log("index", index)
+    return (
+      <div>
+      <h2>Anecdote with most votes:</h2>
+      <p>{anecdotes[index]}</p>
+      <p>has {points[index]} votes</p>
+      </div>
+    )
+  }
+
 
   return (
     <div>
+      <h2>Anecdote of the Day:</h2>
       <p>{anecdotes[selected]}</p>
       <p>has {points[selected]} points.</p>
       <button onClick={updatePoints}>vote </button>
       <button onClick={random}>next anecdote</button>
+      <Anecdote/>
     </div>
   )
 }
